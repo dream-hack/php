@@ -1,7 +1,7 @@
 <?php
 $url = 'https://www.stream-link.org/stream-link.m3u';
 $file = zxCurl($url);
-$fix_file = str_replace('https://sc', 'http://live-php.vercel.app/servi.php?url=https://sc', $file);
+$fix_file = str_replace('https://sc', 'http://live-php.vercel.app/api/servi.php?url=https://sc', $file);
 $fix_file = str_replace('#EXTM3U','#EXTM3U x-tvg-url="http://content.stream-link.org/epg/guide.xml"',$fix_file);
 
 
